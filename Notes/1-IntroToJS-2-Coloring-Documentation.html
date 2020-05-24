@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>1-IntroToJS-2-Coloring</title>
+<title>1-IntroToJS-2-Coloring-Documentation</title>
 
 
 <style type="text/css">
@@ -342,34 +342,67 @@ kbd {
 
 <p><img src="Images/coloring.png" alt="coloring" width="300" height="300"/></p>
 
-<h3 id="toc_2">Make it colorful!</h3>
+<div><pre><code class="language-none">background(148, 251, 255); // RGB
+
+// face
+fill(255, 255, 0);
+strokeWeight(5);
+stroke(204, 16, 191);
+ellipse(202, 208, 300, 300);
+
+// no outlines
+noStroke();
+
+// eyes
+fill(0, 0, 0);
+ellipse(157, 151, 40, 40);
+ellipse(304, 142, 40, 40);
+
+// mouth
+fill(255, 0, 0);
+ellipse(257, 240, 120, 136);
+
+// headband
+strokeWeight(33);
+stroke(250, 0, 242);
+line(83, 116, 271, 74);</code></pre></div>
+
+<h3 id="toc_2">Make it colorful! 给你点颜色看看～～</h3>
 
 <ul>
-<li><code>background(red, green, blue);</code></li>
-<li><code>stroke(r, g, b);</code></li>
-<li><code>fill(r, g, b);</code></li>
+<li><code>background(red, green, blue);</code> 背景（底儿）的颜色</li>
+<li><code>stroke(r, g, b);</code> 形状轮廓线（边儿）的颜色</li>
+<li><code>fill(r, g, b);</code> 形状填充（瓤儿）的颜色</li>
 </ul>
 
-<p>底儿 - 边儿 - 瓤儿 ( color picker )</p>
-
-<h3 id="toc_3">边儿</h3>
+<h3 id="toc_3">Color-picker 选颜色</h3>
 
 <ul>
-<li><code>strokeWeight(thickness);</code></li>
-<li><code>noStroke();</code></li>
+<li>from 0 to 255 for each color</li>
+<li>(0, 0, 0): black </li>
+<li>(255, 255, 255): white</li>
 </ul>
 
-<h3 id="toc_4">Order for coloring</h3>
+<h3 id="toc_4">边儿</h3>
 
 <ul>
-<li><code>background(...)</code> will overlay everything.</li>
+<li><code>strokeWeight(thickness);</code> 轮廓线的宽度</li>
+<li> <code>stroke(r, g, b);</code> 轮廓线的颜色</li>
+<li><code>noStroke();</code> 没有轮廓线</li>
 </ul>
 
-<h4 id="toc_5">Challenge: Sunny snowy day</h4>
+<h3 id="toc_5">Order for coloring</h3>
+
+<ul>
+<li>后画的形状会覆盖掉前面画的形状</li>
+<li><code>background(...)</code> will overlay everything. </li>
+</ul>
+
+<h4 id="toc_6">Challenge: Sunny snowy day</h4>
 
 <p><img src="Images/sunnySnowyDay.png" alt="coloringChallenge" width="300" height="300"/></p>
 
-<h2 id="toc_6">Power of docs</h2>
+<h2 id="toc_7">Power of docs</h2>
 
 <blockquote>
 <p>I can&#39;t remember so many things ... 🤪</p>
@@ -394,7 +427,7 @@ kbd {
 
 <p>Or go ahead to start a <strong>New program</strong>! Maybe a deeper smile 😇</p>
 
-<h2 id="toc_7">Project: Dinner plate</h2>
+<h2 id="toc_8">Project: Dinner plate</h2>
 
 <p><img src="Images/dinnerPlate.png" alt="dinnerPlate" height="300" width="300"/></p>
 
