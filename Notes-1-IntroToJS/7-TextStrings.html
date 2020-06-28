@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>index</title>
+<title>7-Text&Strings</title>
 
 
 <style type="text/css">
@@ -328,21 +328,63 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">Khan Computing</h1>
+<h2 id="toc_0">Text and strings</h2>
 
-<h2 id="toc_1">Computer Programming</h2>
+<div><pre><code class="language-none">fill(0, 13, 255); 
+textSize(18); 
+text(&quot;We are coding!&quot;, 99, 155);</code></pre></div>
 
-<h3 id="toc_2">Intro to JS</h3>
+<ul>
+<li><code>fill()</code>: font color</li>
+<li><code>textSize()</code>: font size</li>
+<li><code>text()</code>: display text
 
-<ol>
-<li><a href="Notes-1-IntroToJS/1-Startup-DrawingBasics.html">Startup, DrawingBasics</a></li>
-<li><a href="Notes-1-IntroToJS/2-Coloring-Documentation.html">Coloring, Power of docs</a></li>
-<li><a href="Notes-1-IntroToJS/3-Variables.html">Variables</a></li>
-<li><a href="Notes-1-IntroToJS/4-AnimationBasics.html">Animation Basics</a></li>
-<li><a href="Notes-1-IntroToJS/5-InteractivePrograms.html">Interactive Programs</a></li>
-<li><a href="Notes-1-IntroToJS/6-ResizingWithVariables.html">Resizing with variables</a></li>
-<li><a href="Notes-1-IntroToJS/7-TextStrings.html">Text and strings</a></li>
-</ol>
+<ul>
+<li>content string, </li>
+<li>x of left-bottom corner of the text box</li>
+<li>y of left-bottom corner of the text box</li>
+</ul></li>
+</ul>
+
+<h3 id="toc_1">Challenge</h3>
+
+<p><img src="Images/myFavoriteFood.png" height="200"></p>
+
+<h2 id="toc_2">String</h2>
+
+<p><span style="color:white;background-color:orange">String 字符串</span> is another important <span style="color:white;background-color:orange">data type 数据类型</span>, besides <span style="color:white;background-color:orange">numbers 数</span>.</p>
+
+<p><code>&quot;Enclosed with a pair of quatation marks.&quot;</code></p>
+
+<div><pre><code class="language-none">// Set font color and size
+fill(92, 24, 219);
+textSize(30);
+
+// Define the string as an variable
+var myName = &quot;Sophia&quot;; 
+
+// Use the variable as the text content to display
+text(myName, 41, 30);
+text(myName, 41, 60);
+text(myName, 41, 90);</code></pre></div>
+
+<p><img src="Images/sophia.png" height="200"/></p>
+
+<h2 id="toc_3">Concatenate string 串接字符串</h2>
+
+<div><pre><code class="language-none">var myName = &quot;Sophia&quot;;
+var message = myName + &quot;!!!&quot;;    // Concatenate 2 strings
+text(message, 41, 30);</code></pre></div>
+
+<p><img src="Images/sophiaWithExclamation.png" height="100"/></p>
+
+<h3 id="toc_4">Challenge: Mouse Tracker</h3>
+
+<p><img src="Images/textingMouseTrack.gif" height="300"/></p>
+
+<h3 id="toc_5">Project: Ad design</h3>
+
+<p><img src="Images/adDesign.gif" height="300"/></p>
 
 
 
