@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>index</title>
+<title>9-LogicAndIfStatement</title>
 
 
 <style type="text/css">
@@ -328,23 +328,57 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">Khan Computing</h1>
+<h2 id="toc_0">Logic and if statement</h2>
 
-<h2 id="toc_1">Computer Programming</h2>
+<h3 id="toc_1">if statement</h3>
 
-<h3 id="toc_2">Intro to JS</h3>
+<p>Bouncy ball</p>
 
-<ol>
-<li><a href="Notes-1-IntroToJS/1-Startup-DrawingBasics.html">Startup, DrawingBasics</a></li>
-<li><a href="Notes-1-IntroToJS/2-Coloring-Documentation.html">Coloring, Power of docs</a></li>
-<li><a href="Notes-1-IntroToJS/3-Variables.html">Variables</a></li>
-<li><a href="Notes-1-IntroToJS/4-AnimationBasics.html">Animation Basics</a></li>
-<li><a href="Notes-1-IntroToJS/5-InteractivePrograms.html">Interactive Programs</a></li>
-<li><a href="Notes-1-IntroToJS/6-ResizingWithVariables.html">Resizing with variables</a></li>
-<li><a href="Notes-1-IntroToJS/7-TextStrings.html">Text and strings</a></li>
-<li><a href="Notes-1-IntroToJS/8-Functions.html">Functions</a></li>
-<li><a href="Notes-1-IntroToJS/9-LogicAndIfStatement.html">Logic and if statement</a></li>
-</ol>
+<p><img src="Images/bouncyBall.gif" height="300"/></p>
+
+<p><img src="Images/if.png" height="350"/></p>
+
+<p><code>if(condition){code to run}</code></p>
+
+<p>If <span style="color: blue">the condition is satisfied</span>, then <span style="color: red">the code runs</span>. Otherwise, the code doesn&#39;t run. </p>
+
+<p>If <span style="color: blue">the ball hits the boundary</span>, then <span style="color: red">the ball bounces back</span>. Otherwise, it goes its way.</p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/if-statements-bouncy-ball/6724999452377088">Example code: Bouncy ball</a></p>
+
+<h3 id="toc_2">Mouse interaction: mouseIsPressed</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/mouse-interaction-hide-and-seen-the-balls/4632227815702528">Hide and see the ball</a></p>
+
+<p><strong>mouseIsPressed</strong> ProcessingJS provides it to check if mouse is pressed.</p>
+
+<div><pre><code class="language-none">position = position + speed;
+ellipse(position, mouseY, 50, 50);
+if (mouseIsPressed) {
+    ellipse(mouseX, position, 50, 50);
+}</code></pre></div>
+
+<h3 id="toc_3">Challenge: Our first painting app</h3>
+
+<p>Use <code>mouseIsPressed</code> to paint it:</p>
+
+<p><img src="Images/mouseIsPressed-Boolean.gif" height="300"/></p>
+
+<h3 id="toc_4">Boolean: true or false</h3>
+
+<p>The 3rd data type we&#39;ve learned so far. </p>
+
+<p>The two that we already grasped are: Number and String.</p>
+
+<p><img src="Images/booleans.png" height="260"/></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/booleans/5258852840325120">Example code: Booleans</a></p>
+
+<h3 id="toc_5">Challenge: Number analyzer</h3>
+
+<p><img src="Images/numberAnalyzer.png" height="200"/></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/challenge-number-analyzer/6478309751341056">Example code: Number analyzer</a></p>
 
 
 
