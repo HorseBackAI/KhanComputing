@@ -364,7 +364,7 @@ if (mouseIsPressed) {
 
 <p><img src="Images/mouseIsPressed-Boolean.gif" height="300"/></p>
 
-<h3 id="toc_4">Boolean: true or false</h3>
+<h3 id="toc_4">Boolean 布尔值: true or false</h3>
 
 <p>The 3rd data type we&#39;ve learned so far. </p>
 
@@ -379,6 +379,102 @@ if (mouseIsPressed) {
 <p><img src="Images/numberAnalyzer.png" height="200"/></p>
 
 <p><a href="https://www.khanacademy.org/computer-programming/challenge-number-analyzer/6478309751341056">Example code: Number analyzer</a></p>
+
+<h3 id="toc_6">Logical Operators 逻辑运算符</h3>
+
+<ul>
+<li>Need to satisfy 2 or more conditions simultaneously: AND 并且 <code>&amp;&amp;</code></li>
+<li>At least satify 1 condition: OR 或者 <code>||</code></li>
+</ul>
+
+<p><a href="https://www.khanacademy.org/computer-programming/logical-operators/4970496601178112">Example code: Color Area and Edge Detector</a></p>
+
+<p><img src="Images/logicOperators.gif" height="300"/></p>
+
+<div><pre><code class="language-none">// Area detector
+if (mouseX &lt; 200 &amp;&amp; mouseY &lt; 200) {
+    fill(242, 22, 59);
+    rect(0, 0, 200, 200); // top left     
+}
+
+...
+
+// Edges detector
+if (abs(mouseX - 200) &lt; 10 || abs(mouseY - 200) &lt; 10 || mouseX &lt; 10 || mouseX &gt; 390 || mouseY &lt; 10 || mouseY &gt; 390) {
+    fill(255, 255, 255);
+    textSize(30);
+    text(&quot;EDGE BALL!&quot;, 115, 195);
+}</code></pre></div>
+
+<h3 id="toc_7">Challenge: Buttons</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/challenge-smarter-button/6676261854593024">Example code: Button Monster</a></p>
+
+<p><img src="Images/buttonMonster.gif" height="300"/></p>
+
+<div><pre><code class="language-none">// mouse click detector
+if (mouseIsPressed &amp;&amp; mouseX &gt;= 50 &amp;&amp; mouseX &lt;= 300 &amp;&amp; mouseY &gt;= 150 &amp;&amp; mouseY &lt;=250) { 
+    fill(33, 112, 52); // click color of button
+    showMonster();
+}</code></pre></div>
+
+<h3 id="toc_8">if / else</h3>
+
+<p>Random number: <code>random(start, end)</code></p>
+
+<p>Round number to the nearest integer: </p>
+
+<ul>
+<li><code>round(0.9)</code> 1</li>
+<li><code>round(0.2)</code> 0</li>
+</ul>
+
+<div><pre><code class="language-none">// Generate a random number between 0 and 1
+var number = random(0, 1);
+// Round it to a nearest integer
+var integer = round(number);</code></pre></div>
+
+<p>There are only 2 possibilities. 非此即彼</p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/ifelse/4899834389938176">Example code: 0 Red vs. 1 Green</a></p>
+
+<p><img src="Images/ifElse.gif" height="200"/></p>
+
+<div><pre><code class="language-none">// Draw the circle
+if (integer === 0) {
+    fill(255, 0, 68);
+} 
+else {
+    fill(9, 255, 0);
+}
+noStroke();
+ellipse(300, 99, 100, 100);</code></pre></div>
+
+<h3 id="toc_9">if / else if</h3>
+
+<p>There are more than 2 possibilities. 3种（包括3种）以上的可能</p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/ifelse-else-if/5477439442862080">Example code: if / else if / else</a></p>
+
+<p><img src="Images/ifElseIfElse.gif" height="200"/></p>
+
+<div><pre><code class="language-none">// generate a random number between 0 and 1
+var number = random(0, 3);
+
+...
+
+// set the coin color
+if (number &lt; 1) {
+    fill(255, 0, 64);
+}
+else if (number &lt; 2) {
+    fill(0, 255, 26);
+}
+else if (number &lt; 3) {
+    fill(255, 247, 0);
+}</code></pre></div>
+
+<h3 id="toc_10">Project: Magic 8-Ball</h3>
 
 
 
