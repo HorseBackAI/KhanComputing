@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>index</title>
+<title>11-Looping</title>
 
 
 <style type="text/css">
@@ -328,25 +328,61 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">Khan Computing</h1>
+<h2 id="toc_0">Looping</h2>
 
-<h2 id="toc_1">Computer Programming</h2>
+<h3 id="toc_1">While loop</h3>
 
-<h3 id="toc_2">Intro to JS</h3>
+<p><img src="Images/whileLoop.png" height="400"/></p>
+
+<p>Please observe to answer 3 questions:</p>
 
 <ol>
-<li><a href="Notes-1-IntroToJS/1-Startup-DrawingBasics.html">Startup, DrawingBasics</a></li>
-<li><a href="Notes-1-IntroToJS/2-Coloring-Documentation.html">Coloring, Power of docs</a></li>
-<li><a href="Notes-1-IntroToJS/3-Variables.html">Variables</a></li>
-<li><a href="Notes-1-IntroToJS/4-AnimationBasics.html">Animation Basics</a></li>
-<li><a href="Notes-1-IntroToJS/5-InteractivePrograms.html">Interactive Programs</a></li>
-<li><a href="Notes-1-IntroToJS/6-ResizingWithVariables.html">Resizing with variables</a></li>
-<li><a href="Notes-1-IntroToJS/7-TextStrings.html">Text and strings</a></li>
-<li><a href="Notes-1-IntroToJS/8-Functions.html">Functions</a></li>
-<li><a href="Notes-1-IntroToJS/9-LogicAndIfStatement.html">Logic and if statement</a></li>
-<li><a href="Notes-1-IntroToJS/10-Debugging.html">Debugging</a></li>
-<li><a href="Notes-1-IntroToJS/11-Looping.html">Looping</a></li>
+<li>What repeat(s)? 什么在重复</li>
+<li>What change(s) each time? 每次重复中，什么在改变</li>
+<li>How many time(s) / how long should we repeat? 重复了多少次，或者说重复了多久</li>
 </ol>
+
+<p><a href="https://www.khanacademy.org/computer-programming/intro-to-while-loops/6194515847495680"> Example code: while loop</a></p>
+
+<div><pre><code class="language-none"> // y marks
+var message = &quot;y --- &quot;;
+var y = 25;
+
+while(y &lt; 400) {
+    text(message + y + &#39; ---&#39;, 50, y);
+    y += 25;
+    // Go back to the start of the loop!
+}</code></pre></div>
+
+<p>Answers: </p>
+
+<ol>
+<li>Text function with the message</li>
+<li>y position increases each time.</li>
+<li>As long as (<span style="color:red">while</span>) the condition (y &lt; 400) is satisfied, it repeats. 当条件满足时，就重复</li>
+</ol>
+
+<h3 id="toc_2">Challenger: Loopy Ruler</h3>
+
+<p><img src="Images/loopyRuler.png" height="300"/></p>
+
+<h3 id="toc_3">Ballon Hopper</h3>
+
+<p><img src="Images/ballonHopper.png" height="300"/></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/more-while-loops-balloon-hopper/4923111885848576">Example code: Bollon Hopper</a></p>
+
+<div><pre><code class="language-none">// Draw ballons and their lines
+var x = 100;
+while (x &lt; 329) {
+    line(x, 94, 224, 300);
+    ellipse(x, 94, 49, 68);
+    x += 60;
+}</code></pre></div>
+
+<h3 id="toc_4">Challenge: A Loopy Landscape</h3>
+
+<p><img src="Images/loopyLandscape.png" height="300"/></p>
 
 
 
