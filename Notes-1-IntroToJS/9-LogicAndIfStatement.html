@@ -366,9 +366,9 @@ if (mouseIsPressed) {
 
 <h3 id="toc_4">Boolean 布尔值: true or false</h3>
 
-<p>The 3rd data type we&#39;ve learned so far. </p>
+<p>Every condition will be evaluated as a Boolean.</p>
 
-<p>The two that we already grasped are: Number and String.</p>
+<p>The 3rd data type we&#39;ve learned so far. The two that we already grasped are: Number and String.</p>
 
 <p><img src="Images/booleans.png" height="260"/></p>
 
@@ -383,7 +383,7 @@ if (mouseIsPressed) {
 <h3 id="toc_6">Logical Operators 逻辑运算符</h3>
 
 <ul>
-<li>Need to satisfy 2 or more conditions simultaneously: AND 并且 <code>&amp;&amp;</code></li>
+<li>Need to satisfy 2 or more conditions (evaluated as Booleans) simultaneously: AND 并且 <code>&amp;&amp;</code></li>
 <li>At least satify 1 condition: OR 或者 <code>||</code></li>
 </ul>
 
@@ -406,6 +406,8 @@ if (abs(mouseX - 200) &lt; 10 || abs(mouseY - 200) &lt; 10 || mouseX &lt; 10 || 
     text(&quot;EDGE BALL!&quot;, 115, 195);
 }</code></pre></div>
 
+<p>About <a href="https://baike.baidu.com/item/%E7%BB%9D%E5%AF%B9%E5%80%BC%E5%87%BD%E6%95%B0/10671320">absolute value</a> “∣x∣表示x轴上的点 x 到原点的距离”</p>
+
 <h3 id="toc_7">Challenge: Buttons</h3>
 
 <p><a href="https://www.khanacademy.org/computer-programming/challenge-smarter-button/6676261854593024">Example code: Button Monster</a></p>
@@ -418,11 +420,11 @@ if (mouseIsPressed &amp;&amp; mouseX &gt;= 50 &amp;&amp; mouseX &lt;= 300 &amp;&
     showMonster();
 }</code></pre></div>
 
-<h3 id="toc_8">if / else</h3>
+<h3 id="toc_8">Random number</h3>
 
 <p>Random number: <code>random(start, end)</code></p>
 
-<p>Round number to the nearest integer: </p>
+<p>Round 圆整 number to the nearest integer: </p>
 
 <ul>
 <li><code>round(0.9)</code> 1</li>
@@ -434,7 +436,9 @@ var number = random(0, 1);
 // Round it to a nearest integer
 var integer = round(number);</code></pre></div>
 
-<p>There are only 2 possibilities. 非此即彼</p>
+<h3 id="toc_9">if / else 如果 / 否则</h3>
+
+<p>There are only 2 possibilities. 仅有两种可能，非此即彼</p>
 
 <p><a href="https://www.khanacademy.org/computer-programming/ifelse/4899834389938176">Example code: 0 Red vs. 1 Green</a></p>
 
@@ -450,7 +454,7 @@ else {
 noStroke();
 ellipse(300, 99, 100, 100);</code></pre></div>
 
-<h3 id="toc_9">if / else if</h3>
+<h3 id="toc_10">if / else if 如果 / 否则如果</h3>
 
 <p>There are more than 2 possibilities. 3种（包括3种）以上的可能</p>
 
@@ -474,7 +478,32 @@ else if (number &lt; 3) {
     fill(255, 247, 0);
 }</code></pre></div>
 
-<h3 id="toc_10">Project: Magic 8-Ball</h3>
+<h3 id="toc_11">Project: Magic 8-Ball</h3>
+
+<p><img src="Images/magic8Ball.png" height="300"/></p>
+
+<div><pre><code class="language-none">// Get a random integer
+var answer = floor(random(1, 5));
+
+...
+
+// Run code under different conditions
+if (answer === 1) {
+    text(&quot;一帆风顺&quot;, 169, 230);
+    text(&quot;One&quot;, 185, 200);
+}
+else if (answer === 2) {
+    text(&quot;双喜临门&quot;, 169, 230);
+    text(&quot;Two&quot;, 185, 200);
+}
+else if (answer === 3) {
+    text(&quot;三阳开泰&quot;, 169, 230);
+    text(&quot;Three&quot;, 185, 200);
+}
+else {
+    text(&quot;四季花开&quot;, 169, 230);
+    text(&quot;Four&quot;, 185, 200);
+}</code></pre></div>
 
 
 
