@@ -337,21 +337,26 @@ kbd {
 <p>Please observe to answer 3 questions:</p>
 
 <ol>
-<li>What repeat(s)? 什么在重复</li>
-<li>What change(s) each time? 每次重复中，什么在改变</li>
-<li>How many time(s) / how long should we repeat? 重复了多少次，或者说重复了多久</li>
+<li>What repeat(s) in every loop? 什么在重复</li>
+<li>What change(s) in every loop? 每次重复中，什么在改变</li>
+<li>How many loop(s) / how long should we repeat? 重复了多少次，或者说重复了多久
+
+<ul>
+<li>Start</li>
+<li>Stop</li>
+</ul></li>
 </ol>
 
 <p><a href="https://www.khanacademy.org/computer-programming/intro-to-while-loops/6194515847495680"> Example code: while loop</a></p>
 
 <div><pre><code class="language-none"> // y marks
 var message = &quot;y --- &quot;;
-var y = 25;
-
-while(y &lt; 400) {
-    text(message + y + &#39; ---&#39;, 50, y);
-    y += 25;
-    // Go back to the start of the loop!
+var y = 25;   // start
+while(y &lt; 400) {   // stop
+    text(message + y + &#39; ---&#39;, 50, y);   // repeating code
+    y += 25;   // change in every loop
+    
+    // Go back to the start of the loop and looping!
 }</code></pre></div>
 
 <p>Answers: </p>
@@ -359,7 +364,12 @@ while(y &lt; 400) {
 <ol>
 <li>Text function with the message</li>
 <li>y position increases each time.</li>
-<li>As long as (<span style="color:red">while</span>) the condition (y &lt; 400) is satisfied, it repeats. 当条件满足时，就重复</li>
+<li>As long as (<span style="color:red">while</span>) the condition (y &lt; 400) is satisfied, it repeats. 当条件满足时，就重复
+
+<ul>
+<li>Start: y = 25</li>
+<li>Stop: y &lt; 400 </li>
+</ul></li>
 </ol>
 
 <h3 id="toc_2">Challenger: Loopy Ruler</h3>
@@ -383,6 +393,53 @@ while (x &lt; 329) {
 <h3 id="toc_4">Challenge: A Loopy Landscape</h3>
 
 <p><img src="Images/loopyLandscape.png" height="300"/></p>
+
+<h3 id="toc_5">For loop</h3>
+
+<p><img src="Images/forLoop.png" height="300"/></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/for-loops/5521047769399296">Example code: for loop</a></p>
+
+<div><pre><code class="language-none">fill(240, 17, 54);
+
+// While loop
+var y = 50;
+while (y &lt; 351) {
+    text(&quot;好想游泳 🏊 呀&quot;, 78, y);
+    y += 56;
+}
+
+fill(25, 168, 30);
+
+// For Loop
+for (var y = 50; y &lt; 351; y += 56) {
+    text(&quot;乐队的夏天!&quot;, 236, y);
+}
+
+/*
+for (start; how many loops it repeats; changes in every loop) 
+{
+   repeating code in every loop
+}
+*/</code></pre></div>
+
+<h3 id="toc_6">Nested for loops</h3>
+
+<p>Create a grass land using the grass block.</p>
+
+<p><img src="Images/grassSingle.png" height="80"/></p>
+
+<p><img src="Images/grassLoop.png" height="300"/></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/nested-for-loops/5119381287026688">Example code: nested for loops</a></p>
+
+<div><pre><code class="language-none">imageMode(CENTER);
+
+for (var j = 0; j &lt; 13; j++) {
+    for (var i = 0; i &lt; 12; i++) {
+        image(getImage(&quot;cute/GrassBlock&quot;), i*35, j*31, 40, 60);
+    }
+}</code></pre></div>
 
 
 
