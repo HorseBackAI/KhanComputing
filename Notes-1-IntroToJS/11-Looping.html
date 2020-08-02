@@ -427,17 +427,14 @@ for (start; how many loops it repeats; changes in every loop)
 
 <p>Create a grass land using the grass block.</p>
 
-<p><img src="Images/grassSingle.png" height="80"/></p>
-
-<p><img src="Images/grassLoop.png" height="300"/></p>
+<p><img src="Images/grassBlocks.png" height="300"/></p>
 
 <p><a href="https://www.khanacademy.org/computer-programming/nested-for-loops/5119381287026688">Example code: nested for loops</a></p>
 
-<div><pre><code class="language-none">imageMode(CENTER);
-
-for (var j = 0; j &lt; 13; j++) {
-    for (var i = 0; i &lt; 12; i++) {
-        image(getImage(&quot;cute/GrassBlock&quot;), i*35, j*31, 40, 60);
+<div><pre><code class="language-none">// A matrix (row x column) of grass blocks
+for (var j = 0; j &lt; 6; j++) {
+    for (var i = 0; i &lt; 11; i++) {
+        image(getImage(&quot;cute/GrassBlock&quot;), i*40, j*43+154, 40, 60);
     }
 }</code></pre></div>
 
