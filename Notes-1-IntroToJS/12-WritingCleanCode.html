@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>index</title>
+<title>12-WritingCleanCode</title>
 
 
 <style type="text/css">
@@ -328,26 +328,69 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">Computer Programming 编程</h1>
+<h2 id="toc_0">Writing clean code</h2>
 
-<h3 id="toc_1">Intro to Javascript 入门</h3>
+<h3 id="toc_1">Methods to make code clean</h3>
 
-<ol>
-<li><a href="Notes-1-IntroToJS/1-Startup-DrawingBasics.html">Startup, DrawingBasics</a> 开始，绘图基础</li>
-<li><a href="Notes-1-IntroToJS/2-Coloring-Documentation.html">Coloring, Power of docs</a> 给图形上色，使用文档</li>
-<li><a href="Notes-1-IntroToJS/3-Variables.html">Variables</a> 变量</li>
-<li><a href="Notes-1-IntroToJS/4-AnimationBasics.html">Animation Basics</a> 动画基础</li>
-<li><a href="Notes-1-IntroToJS/5-InteractivePrograms.html">Interactive Programs</a> 交互响应程序</li>
-<li><a href="Notes-1-IntroToJS/6-ResizingWithVariables.html">Resizing with variables</a> 使用变量调整图形尺寸</li>
-<li><a href="Notes-1-IntroToJS/7-TextStrings.html">Text and strings</a> 文本和字符串</li>
-<li><a href="Notes-1-IntroToJS/8-Functions.html">Functions</a> 方法（或称函数）</li>
-<li><a href="Notes-1-IntroToJS/9-LogicAndIfStatement.html">Logic and if statement</a> 逻辑和 if 判断语句</li>
-<li><a href="Notes-1-IntroToJS/10-Debugging.html">Debugging</a> 查找错误（或称查虫）</li>
-<li><a href="Notes-1-IntroToJS/11-Looping.html">Looping</a> 循环</li>
-<li><a href="Notes-1-IntroToJS/12-WritingCleanCode.html">Writing clean code</a> 优化代码和注释</li>
-<li>Arrays 数组</li>
-<li>Objects 对象</li>
-</ol>
+<ul>
+<li>Change new line for each new command 换行</li>
+<li>Indent 缩进</li>
+<li>Spacing 空格</li>
+</ul>
+
+<p>Example: from dirty to clean</p>
+
+<p>Dirty</p>
+
+<div><pre><code class="language-none">fill(80,204,55);rect(100,0,200,400);
+var draw=function(){var numCircles = 6;for (var i=numCircles; i&gt;1; i--){var radius=i*7;
+if (mouseX&gt;100&amp;&amp;mouseX&lt;300) {fill(255,255,255);}else{fill(80,204,55);}ellipse(mouseX,mouseY,radius,radius);}};</code></pre></div>
+
+<p>Clean</p>
+
+<div><pre><code class="language-none">// Now with spaces!
+fill(80, 204, 55);
+rect(100, 0, 200, 400);
+
+var draw = function() {
+    var numCircles = 6;
+    for (var i = numCircles; i &gt; 1; i--) {
+        var radius = i * 7;
+        if (mouseX &gt; 100 &amp;&amp; mouseX &lt; 300) {
+            fill(255, 255, 255);
+        } else {
+            fill(80, 204, 55);
+        }
+        ellipse(mouseX, mouseY, radius, radius);
+    }
+};</code></pre></div>
+
+<h3 id="toc_2">Clarifying with comments</h3>
+
+<p><span style="color: red">Why</span> do we need to add comments?</p>
+
+<p><img src="Images/comments.png" height="200"/></p>
+
+<ul>
+<li>Help others understand your code</li>
+<li>Thus others can fix or add features to the code</li>
+<li>Anyway, help yourself understand the code</li>
+</ul>
+
+<p><span style="color: red">How</span>:</p>
+
+<ul>
+<li>Single line <code>// comments</code></li>
+<li>Multiple lines</li>
+</ul>
+
+<div><pre><code class="language-none">/* Multiple lines of comments
+We can span the comment over
+multiple lines */</code></pre></div>
+
+<p><a href="https://www.khanacademy.org/computer-programming/clarifying-with-comments-bouncing-ball/5063064407064576">Example code and comments: Bouncing ball</a></p>
+
+<p><img src="Images/commentsBouncingBall.gif" height="300"/></p>
 
 
 
