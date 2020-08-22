@@ -3,7 +3,9 @@ Help/
 StudyPlans/
 Code/
 The-Nature-of-Code-Examples-master/
+Notes-2-Algorithms/
 *.md
 .DS_Store
 *.zip
 *.txt
+*.js
