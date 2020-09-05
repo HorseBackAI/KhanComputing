@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>index</title>
+<title>14-Objects</title>
 
 
 <style type="text/css">
@@ -328,26 +328,136 @@ kbd {
 
 <body>
 
-<h1 id="toc_0">Computer Programming 编程</h1>
+<h2 id="toc_0">Objects</h2>
 
-<h3 id="toc_1">Intro to Javascript 入门</h3>
+<p>对象，到目前我们学到的第5种数据类型</p>
 
-<ol>
-<li><a href="Notes-1-IntroToJS/1-Startup-DrawingBasics.html">Startup, DrawingBasics</a> 开始，绘图基础</li>
-<li><a href="Notes-1-IntroToJS/2-Coloring-Documentation.html">Coloring, Power of docs</a> 给图形上色，使用文档</li>
-<li><a href="Notes-1-IntroToJS/3-Variables.html">Variables</a> 变量</li>
-<li><a href="Notes-1-IntroToJS/4-AnimationBasics.html">Animation Basics</a> 动画基础</li>
-<li><a href="Notes-1-IntroToJS/5-InteractivePrograms.html">Interactive Programs</a> 交互响应程序</li>
-<li><a href="Notes-1-IntroToJS/6-ResizingWithVariables.html">Resizing with variables</a> 使用变量调整图形尺寸</li>
-<li><a href="Notes-1-IntroToJS/7-TextStrings.html">Text and strings</a> 文本和字符串</li>
-<li><a href="Notes-1-IntroToJS/8-Functions.html">Functions</a> 方法（或称函数）</li>
-<li><a href="Notes-1-IntroToJS/9-LogicAndIfStatement.html">Logic and if statement</a> 逻辑和 if 判断语句</li>
-<li><a href="Notes-1-IntroToJS/10-Debugging.html">Debugging</a> 查找错误（或称查虫）</li>
-<li><a href="Notes-1-IntroToJS/11-Looping.html">Looping</a> 循环</li>
-<li><a href="Notes-1-IntroToJS/12-WritingCleanCode.html">Writing clean code</a> 优化代码和注释</li>
-<li><a href="Notes-1-IntroToJS/13-Arrays.html">Arrays</a> 数组</li>
-<li><a href="Notes-1-IntroToJS/14-Objects.html">Objects</a> 对象</li>
-</ol>
+<h3 id="toc_1">Array vs Object</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/array-vs-object/4688934048972800">Example code</a></p>
+
+<div><pre><code class="language-none">// Shoe sizes of our class
+var shoeSizes = [37, 38, 42, 39];
+
+// Xiaoming&#39;s introduction with array
+var xiaoming = [&#39;Xiaoming&#39;, 13, 42, true];
+// name, age, shoe size, middle-school student?
+
+// A better (more intuitive) way to introduce Xiaoming with object
+var xiaomingObj = {
+  name: &quot;Xiaoming&quot;,
+  age: 13,
+  shoeSize: 42,
+  middleSchool: true,
+  favoriteSports: [&#39;瑜伽&#39;,&#39;游泳&#39;,&#39;跑步&#39;]
+};</code></pre></div>
+
+<h3 id="toc_2">Object type and instance 对象的类型和实例</h3>
+
+<p>一个对象</p>
+
+<div><pre><code class="language-none">var xiaomingObj = {
+  name: &quot;Xiaoming&quot;, // 已经学过的数据类型：1) 字符串
+  age: 13, // 2) 数值
+  shoeSize: 42,
+  middleSchool: true, // 3) 布尔值
+  favoriteSports: [&#39;瑜伽&#39;,&#39;游泳&#39;,&#39;跑步&#39;] // 4) 数组
+};</code></pre></div>
+
+<p>如果有好多个小明～～<span style="color:red">同学</span></p>
+
+<p>同学们的共有信息：
+Student:</p>
+
+<ul>
+<li>name</li>
+<li>age</li>
+<li>shoeSize</li>
+<li>...</li>
+</ul>
+
+<p>那么，可以把<span style="color:red">同学</span>自定义为一种数据类型，包括了上述的信息
+这种自定义的数据类型：</p>
+
+<ul>
+<li>更符合直觉</li>
+<li>更方便使用</li>
+</ul>
+
+<p><a href="https://www.khanacademy.org/computer-programming/object-types/5259539378946048">Example code: 对象的类型和实例</a></p>
+
+<div><pre><code class="language-none">/* 
+Type 数据类型: 
+Student 首字母大写即可
+constructor function 构造数据类型的方法
+就是定义一个function
+每个同学的信息呀有不同的值，它们就是参数，输入给function
+那么输出的就是不同的每位具体的同学
+*/
+var Student = function(name, age, shoeSize, x, y) {
+    this.name = name;
+    this.age = age + &quot;岁&quot;;
+    this.shoeSize = &quot;鞋码&quot; + shoeSize + &quot;号&quot;;
+    this.x = x;
+    this.y = y;
+};
+
+/*
+Instance 实例：
+使用同学这个自定义的数据类型的构造方法，
+给出具体参数，构造出各不相同的一个个新的对象（实例）
+*/
+var xiaoming = new Student(&quot;小明&quot;, 13, 43, 20, 150);
+var azhen = new Student(&quot;阿珍&quot;, 12, 40, 229, 150);
+
+fill(255, 0, 0);
+text(xiaoming, 30, 30);
+text(xiaoming.name + &#39;: &#39; + xiaoming.shoeSize, 30, 60);</code></pre></div>
+
+<h3 id="toc_3">Modifying Objects 修改更新对象</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/modifying-objects/5199583866863616">Example code</a></p>
+
+<p>定义对象类型</p>
+
+<div><pre><code class="language-none">// Define object Type 定义对象类型
+var Student = function(name, age, sports, studyProgramming, contact) {
+    this.name = name;
+    this.age = age;
+    this.sports = sports;
+    this.studyProgramming = studyProgramming;
+    this.contact = contact;
+};</code></pre></div>
+
+<p>创建对象实例</p>
+
+<div><pre><code class="language-none">// Create a new object instance 创建新的对象实例
+var xiaoming = new Student(
+    &quot;xiaoming&quot;,
+    13,
+    [&#39;篮球&#39;,&#39;柔道&#39;],
+    true,
+    {city: &#39;北京&#39;, address: &#39;向阳街19号&#39;, phoneNumber: &#39;18233333333&#39;}
+);</code></pre></div>
+
+<p>更新对象实例</p>
+
+<div><pre><code class="language-none">// Modifying object 修改对象
+fill(0, 0, 255);
+while(xiaoming.age &lt;= 18){
+    text(&quot;Xiaoming\&#39;s age: &quot; + xiaoming.age, 20, xiaoming.age*20-70);
+    if(xiaoming.age &gt;= 15){
+        xiaoming.sports.push(&#39;游泳&#39;);
+        xiaoming.likes = &#39;旅行&#39;;
+    }
+    xiaoming.age++;
+}</code></pre></div>
+
+<h3 id="toc_4">Challenge: Picture Painter</h3>
+
+<p><img src="Images/paintBrushObject.gif" height="300"/></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/challenge-picture-painter-using-object/6623463437320192">Example code: paint brush as object</a></p>
 
 
 
