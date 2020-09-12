@@ -328,24 +328,38 @@ kbd {
 
 <body>
 
-<h2 id="toc_0">Animation Basics</h2>
+<h2 id="toc_0">Animation Basics 动画玩起来！</h2>
 
 <p><img src="Images/carPencilPaperAnimation.gif" height="300"></p>
 
-<h4 id="toc_1">1) Flipping the papers</h4>
+<p>Please tell us what changes in the above animation?</p>
+
+<p>提问：👆动画里什么在变化？在时间的线上～～</p>
+
+<p><img src="Images/makingAnimations.gif" height="300"/></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/making-animations/4661005640351744">Example code 示例代码：第一个动画是小汽车</a>🚗</p>
+
+<h3 id="toc_1">1) Flipping the papers 快速翻起图画来</h3>
 
 <div><pre><code class="language-none">draw = function(){
    // all lines of code inside here will be run repeatedly
    ...
 }</code></pre></div>
 
-<p>A built-in function (method) for your convenience to call (use).</p>
+<p>A built-in function (method) for your convenience to call (use). 已经被写好的、可以拿来就用的画图方法！</p>
 
-<h4 id="toc_2">2) Make changes:</h4>
+<p>每一翻：画每一幅图：就是画每一<span style="color:red">帧 frame</span></p>
+
+<p>图画之间不相同 --&gt; 看我72变，图画里的东东<span style="color:red">动起来</span>！</p>
+
+<h3 id="toc_2">2) Make changes: 变～～</h3>
 
 <blockquote>
-<p>What can change?</p>
+<p>What can change? 都啥能变？</p>
 </blockquote>
+
+<p>啥都能变！</p>
 
 <ul>
 <li>position (位置)</li>
@@ -355,52 +369,75 @@ kbd {
 <li>or expression (表情) etc. (更多)</li>
 </ul>
 
-<p>Initial <strong>position</strong>: before the <code>draw</code> function</p>
+<p>Initial <strong>position</strong> 初始位置: before the <code>draw</code> function 画图方法</p>
 
 <p><code>x = 20;</code></p>
 
-<p>In the <code>draw</code> function, change it:</p>
+<p>In the <code>draw</code> function, change it: 每一帧，位置发生变化，向右一点点</p>
 
 <p><code>x = x + 1;</code></p>
 
-<h4 id="toc_3">3) Cover previous drawings</h4>
+<h3 id="toc_3">3) Cover previous drawings 重画背景，覆盖全图，不拖沓！</h3>
 
 <p><code>background(r, g, b);</code></p>
 
-<p>Otherwise, like below ...</p>
+<p>Otherwise, like below ... 否则，拖沓成这样👇</p>
 
 <p><img src="Images/bodyCannotCatchUpWithSoul.gif" height="300"></p>
 
-<h2 id="toc_4">精彩纷呈的 Brilliant spin-offs!</h2>
+<h2 id="toc_4">精彩纷呈的 Brilliant spin-offs 继续创造!</h2>
 
-<p><a href="https://www.khanacademy.org/computer-programming/spin-off-of-hamburger-expressfaster/5185913383108608"><img src="Images/hamburgerExpress.gif" height="300"></a></p>
+<p><img src="Images/hamburgerExpress.gif" height="300"></p>
 
-<p>👆作品名称是：<span style="color: red">Hamburger express</span></p>
+<p>作品名称是：<span style="color: red">Hamburger express</span></p>
 
-<p><strong>网络的学习世界</strong>：重在什么？...</p>
+<p>这个作品，你是在哪发现的？</p>
+
+<p>-- <a href="https://www.khanacademy.org/computing/computer-programming/programming/animation-basics/pt/making-animations">这里</a></p>
 
 <p><img src="Images/spinOffs.png" height="500"></p>
 
-<h2 id="toc_5">Challenge: Exploding the sun</h2>
+<p><a href="https://www.khanacademy.org/computer-programming/spin-off-of-hamburger-expressfaster/5185913383108608">Example code: 汉堡包特快</a></p>
 
-<p>Every morning (in fact, it&#39;s each drawing), the sun size changes. <code>sunSize = sunSize + 1;</code></p>
+<h3 id="toc_5">在网络这个学习世界：要怎样学？</h3>
+
+<ul>
+<li>搜索、发现、学习、借鉴</li>
+<li>继续创造</li>
+</ul>
+
+<h2 id="toc_6">Challenge: Exploding the sun 冉冉</h2>
+
+<p>In every moment (in fact, in each frame), the sun size changes. <code>sunSize = sunSize + 1;</code> 每一刻，或者说每一帧，太阳都在长大！</p>
 
 <p><img src="Images/explodingSun.gif" height="300"></p>
 
+<p><a href="https://www.khanacademy.org/computer-programming/challenge-exploding-sun/5677052967337984">Example code: Exploding the sun</a></p>
+
+<p><strong>挑战一下</strong></p>
+
 <blockquote>
-<p>How about moving the code of drawing the land out of the <code>draw</code> function? What will happen?</p>
+<p>How about moving the code of drawing the land out of (before and after) the <code>draw</code> function? What will happen? 如果我们把画大地的代码移到画图方法之外（之前和之后），会怎样？</p>
 </blockquote>
 
 <div><pre><code class="language-none">// The land, blocking half of the sun
 fill(76, 168, 67);
 rect(0, 300, 400, 100);</code></pre></div>
 
-<h2 id="toc_6">第一次发现：数学～好使！</h2>
+<p><code>draw</code> 很勤劳！而且还很快！</p>
 
-<p><a href="https://www.khanacademy.org/computer-programming/spin-off-of-incrementing-shortcuts/4564859302789120"><img src="Images/colorfulMovingBall.gif" height="300"></a></p>
+<h2 id="toc_7">第一次发现：数学～好使！</h2>
+
+<p><img src="Images/colorfulMovingBall.gif" height="300"></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/spin-off-of-incrementing-shortcuts/4564859302789120">Example code: Color running ball 五彩跑步球</a></p>
+
+<p><span style="color:red">用数来描述和操控对象</span>，这样的数可以叫做这个对象的<span style="color:red">参数</span></p>
+
+<p>We can use numbers and math to describe and manipulate how an object moves or changes appearance. 用数和数学来描述和操控对象的<span style="color:red">运动或外观</span>！</p>
 
 <blockquote>
-<p>What numbers (paremeters) change?</p>
+<p>What numbers (paremeters) change? 参数</p>
 </blockquote>
 
 <ul>
@@ -408,32 +445,40 @@ rect(0, 300, 400, 100);</code></pre></div>
 <li>anything else?</li>
 </ul>
 
-<p>We can use numbers and math to describe 描述 / manipulate 操控 how an object moves or changes appearance.</p>
+<h2 id="toc_8">Incrementing shortcut 快捷地给增量</h2>
 
-<h2 id="toc_7">Incrementing shortcut</h2>
+<p>让数变化！让参数变化！让位置（运动起来）、外观变化！</p>
 
-<div><pre><code class="language-none">x += 1;
-y -= 1;
-ballWidth *= 99/100;
-ballHeight *= 99/100;</code></pre></div>
+<div><pre><code class="language-none">x += 1; // x = x + 1;
+y -= 1; // y = y - 1;
+ballWidth *= 99/100; // ballWidth = ballWidth * 99/100;
+ballHeight *= 99/100; // ballHeight = ballHeight * 99/100;</code></pre></div>
 
 <p>Even shorter: <code>eyeSize++;</code></p>
 
-<h2 id="toc_8">Challenge: Parting clouds 彩云追月</h2>
+<h2 id="toc_9">Challenge: Parting clouds 彩云追月</h2>
 
 <p>上面中文翻译对吗？😄</p>
 
-<p>Again, <strong>what values change</strong> in this animation?</p>
+<p>Again, <strong>what values change</strong> in this animation? 还是那招：动画～就是图画里的什么在变呢？</p>
+
+<p>And then, use number to describe and manipulate them. 并且用数来描述和操控它们！</p>
 
 <p><img src="Images/partingClouds.gif" height="300"></p>
 
-<p>Please use your <strong>math</strong> and <strong>magic</strong>! Or get <strong>inspiration</strong> from others&#39; spin-offs ~~~</p>
+<p><a href="https://www.khanacademy.org/computer-programming/challenge-parting-clouds/4781257611100160">Parting Clouds 彩云追月</a></p>
 
-<p><a href="https://www.khanacademy.org/computer-programming/parting-clouds-and-starry-night/6374461125771264"><img src="Images/partingCloudsStarryNight.gif" height="300"></a></p>
+<p>Please use your <strong>math</strong> and <strong>magic</strong>! Or get <strong>inspiration</strong> from others&#39; spin-offs ~~~ 灵感从哪里来？可以看看其他同学的创造呀</p>
 
-<h2 id="toc_9">Project: Shooting star</h2>
+<p><img src="Images/partingCloudsStarryNight.gif" height="300"></p>
 
-<p><a href="https://www.khanacademy.org/computer-programming/project-shooting-star/5282116892442624"><img src="Images/shootingStars.gif" height="300"></a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/parting-clouds-and-starry-night/6374461125771264">Example code: Parting clouds and starry night 云儿跑，星儿照</a></p>
+
+<h2 id="toc_10">Project: Shooting stars</h2>
+
+<p><img src="Images/shootingStars.gif" height="300"></p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/project-shooting-star/5282116892442624">Example code: Shooting stars</a></p>
 
 
 
