@@ -332,9 +332,9 @@ kbd {
 
 <p>对象，到目前我们学到的第5种数据类型</p>
 
-<h3 id="toc_1">Array vs Object</h3>
+<h3 id="toc_1">Array vs Object 比较数组和对象</h3>
 
-<p><a href="https://www.khanacademy.org/computer-programming/array-vs-object/4688934048972800">Example code</a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/array-vs-object/4688934048972800">Example code: Array vs Object</a></p>
 
 <div><pre><code class="language-none">// Shoe sizes of our class
 var shoeSizes = [37, 38, 42, 39];
@@ -416,7 +416,7 @@ text(xiaoming.name + &#39;: &#39; + xiaoming.shoeSize, 30, 60);</code></pre></di
 
 <h3 id="toc_3">Modifying Objects 修改更新对象</h3>
 
-<p><a href="https://www.khanacademy.org/computer-programming/modifying-objects/5199583866863616">Example code</a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/modifying-objects/5199583866863616">Example code: Modify objects</a></p>
 
 <p>定义对象类型</p>
 
@@ -458,6 +458,58 @@ while(xiaoming.age &lt;= 18){
 <p><img src="Images/paintBrushObject.gif" height="300"/></p>
 
 <p><a href="https://www.khanacademy.org/computer-programming/challenge-picture-painter-using-object/6623463437320192">Example code: paint brush as object</a></p>
+
+<h3 id="toc_5">Array of Objects 一组对象推进一个数组</h3>
+
+<h4 id="toc_6">回归小结：数组和对象的用途</h4>
+
+<ul>
+<li>Array 数组：<span style="color:red"/>方便循环</span>，自动执行</li>
+<li>Object 对象：方便整合信息，每个事物、也就是<span style="color:red"/>每个对象其实都是一个信息的集合<span></li>
+</ul>
+
+<p><img src="Images/arrayOfObjects.png" height="300"/></p>
+
+<p>How to draw these faces? 怎样画这么老一些脸？</p>
+
+<ul>
+<li>Method 1: One by one, calling the draw function and giving x and y values.
+一个一个画，每一次手动调用画画方法</li>
+<li>Method 2: Loop x and y arrays 把坐标弄成数组，自动循环画</li>
+<li>Method 3: Make positions as objects, and change draw method to accept position object as input把位置做成对象，改造画画方法接收对象作为输入的参数</li>
+<li>Method 4: Push position objects into array and loop through the array 推一组位置对象进数组，自动循环画</li>
+</ul>
+
+<p><a href="https://www.khanacademy.org/computer-programming/arrays-of-objects/4608724224393216">Example code: Array of Objects</a></p>
+
+<div><pre><code class="language-none">// Push a few face position objects into a array
+// 把一组位置对象push进一个数组
+var facePositionArray = [
+    {x: 99, y: 105},
+    {x: 294, y: 105},
+    {x: 101, y: 302},
+    {x: 294, y: 302},
+    {x: 200, y: 200}
+];
+
+// Change drawWinston method to accept a position object as input
+// 改造drawWinston方法，让它接收的参数是一个位置对象
+var drawWinstonObj = function(facePosition) {
+    var faceX = facePosition.x;
+    var faceY = facePosition.y;
+    
+    fill(255, 255, 0);
+    ellipse(faceX, faceY, 180, 180); // face
+    fill(46, 46, 41);
+    ellipse(faceX - 30, faceY - 50, 30, 30); // eyes
+    ellipse(faceX + 44, faceY - 55, 30, 30);
+    fill(252, 65, 65);
+    ellipse(faceX + 19, faceY + 32, 82, 81); // mouth
+};
+
+for (var i = 0; i &lt; facePositionArray.length; i++) {
+    drawWinstonObj(facePositionArray[i]);
+}</code></pre></div>
 
 
 
