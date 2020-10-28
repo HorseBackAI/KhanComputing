@@ -330,12 +330,14 @@ kbd {
 
 <h2 id="toc_0">Interactive programs 交互的程序</h2>
 
+<h3 id="toc_1">What is <em>interaction</em>? 啥是交互？</h3>
+
 <p><img src="Images/pcLaptopPadPhone.png" height="300"></p>
 
 <blockquote>
 <ul>
-<li>What interactions do we have with a <span style="color: #ff8800">computer</span>?</li>
-<li>What can we do with such interactions? </li>
+<li>What <em>interactions</em> do we have with a <span style="color: #ff8800">computer</span>? 和<span style="color: #ff8800">电脑</span>，咱都有什么样的交互？从键盘、鼠标到触碰...</li>
+<li>What can we do with such <em>interactions</em>? 通过这些交互，咱能干嘛？</li>
 </ul>
 </blockquote>
 
@@ -343,16 +345,18 @@ kbd {
 
 <blockquote>
 <ul>
-<li>What interactions do we have with the <span style="color: #2bff00">real world</span>?</li>
-<li>And what can we do with them?</li>
+<li>What <em>interactions</em> do we have with the <span style="color: #2bff00">real world</span>? 和<span style="color: #2bff00">真实世界</span>，咱有什么交互？是不是更丰富？</li>
+<li>And what can we do with them? 咱能干嘛？通过这老些交互</li>
 </ul>
 </blockquote>
 
-<h2 id="toc_1">Mouse interaction</h2>
+<h3 id="toc_2">Mouse interaction 鼠标的交互</h3>
 
-<p><strong>mouseX, mouseY</strong>: Interactions from mouse position and moving</p>
+<p><strong>mouseX, mouseY</strong>: Interactions from mouse position and moving 鼠标的位置和移动</p>
 
-<h2 id="toc_2">Challenge: Tasty tomato</h2>
+<h3 id="toc_3">Challenge: Tasty tomato 🍅柿子咬一口！</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/challenge-tasty-tomato/4623451338522624">Example code: Tasty tomato</a></p>
 
 <div><pre><code class="language-none">draw = function() {
     // take a bite out of the tomato!
@@ -362,6 +366,15 @@ kbd {
 };</code></pre></div>
 
 <p><img src="Images/biteAppleMouseInteraction.gif" height="300"/></p>
+
+<p>上面是draw方法里就有鼠标，而下面是更明确的鼠标交互</p>
+
+<div><pre><code class="language-none">// The function will get called every time the user clicks the mouse.
+// 鼠标点击才交互
+mouseClicked = function() {
+    fill(255, 255, 255);
+    ellipse(mouseX, mouseY, 60, 60);
+};</code></pre></div>
 
 
 
