@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>7-Text&Strings</title>
+<title>7-TextStrings</title>
 
 
 <style type="text/css">
@@ -328,61 +328,79 @@ kbd {
 
 <body>
 
-<h2 id="toc_0">Text and strings</h2>
+<h2 id="toc_0">Text and strings 文本～字符串</h2>
 
-<div><pre><code class="language-none">fill(0, 13, 255); 
+<div><pre><code class="language-none">// 字体颜色
+fill(0, 13, 255); 
+
+// 字号，也就是字体大小
 textSize(18); 
-text(&quot;We are coding!&quot;, 99, 155);</code></pre></div>
+
+// 输出吧文本
+text(&quot;We are coding!&quot;, 99, 155); </code></pre></div>
 
 <ul>
-<li><code>fill()</code>: font color</li>
-<li><code>textSize()</code>: font size</li>
-<li><code>text()</code>: display text
+<li><code>text()</code> 的参数：
 
 <ul>
-<li>content string, </li>
-<li>x of left-bottom corner of the text box</li>
-<li>y of left-bottom corner of the text box</li>
+<li>文本内容 content string, </li>
+<li>文本框左下角的横坐标 x of left-bottom corner of the text box</li>
+<li>文本框左下角的纵坐标 y of left-bottom corner of the text box</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_1">Challenge</h3>
+<h3 id="toc_1">Challenge: My favorite foods 我爱吃的</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/text-and-string-my-favorite-foods/6283708668002304">Example code</a></p>
 
 <p><img src="Images/myFavoriteFood.png" height="200"></p>
 
-<h2 id="toc_2">String</h2>
+<h3 id="toc_2">String 字符串 ～ 第二个数据类型！</h3>
 
 <p><span style="color:white;background-color:orange">String 字符串</span> is another important <span style="color:white;background-color:orange">data type 数据类型</span>, besides <span style="color:white;background-color:orange">numbers 数</span>.</p>
 
-<p><code>&quot;Enclosed with a pair of quatation marks.&quot;</code></p>
+<p>用一对引号括起来！</p>
 
-<div><pre><code class="language-none">// Set font color and size
+<p><code>&quot;Enclosed with a pair of quatation marks.&quot;</code> </p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/pjs/5988122936950784">Example code: 好几个张小二～～</a></p>
+
+<p><img src="Images/zhangxiaoer.png" height="200"/></p>
+
+<div><pre><code class="language-none">// Set font color and size 设置字体颜色和字号
 fill(92, 24, 219);
-textSize(30);
+textSize(20);
 
-// Define the string as an variable
-var myName = &quot;Sophia&quot;; 
+// Define the string as an variable 
+// 定义一个变量，它是字符串！
+var myName = &quot;张小二呀&quot;; 
 
 // Use the variable as the text content to display
-text(myName, 41, 30);
-text(myName, 41, 60);
-text(myName, 41, 90);</code></pre></div>
+// 使用这个变量作为文本，多次输出吧
+text(myName, 40, 60);
+text(myName, 40, 90);
+text(myName, 40, 120);
+</code></pre></div>
 
-<p><img src="Images/sophia.png" height="200"/></p>
+<h3 id="toc_3">Concatenate strings 把几个字符串：串接起来！</h3>
 
-<h2 id="toc_3">Concatenate string 串接字符串</h2>
+<p><a href="https://www.khanacademy.org/computer-programming/pjs/5988122936950784">Example code</a></p>
 
-<div><pre><code class="language-none">var myName = &quot;Sophia&quot;;
-var message = myName + &quot;!!!&quot;;    // Concatenate 2 strings
+<p><img src="Images/concatenateStrings.png" height="100"/></p>
+
+<div><pre><code class="language-none">var myName = &quot;张老二&quot;;
+var message = myName + &quot;: &quot; + &quot; 你不是张老三&quot; + &quot;!!&quot;;    // Concatenate 2 strings
 text(message, 41, 30);</code></pre></div>
 
-<p><img src="Images/sophiaWithExclamation.png" height="100"/></p>
+<h3 id="toc_4">Challenge: Mouse Tracker 坐标文本追着鼠标跑～～biu～</h3>
 
-<h3 id="toc_4">Challenge: Mouse Tracker</h3>
+<p><a href="https://www.khanacademy.org/computer-programming/challenge-mouse-tracker/5687850272505856">Example code</a></p>
 
 <p><img src="Images/textingMouseTrack.gif" height="300"/></p>
 
-<h3 id="toc_5">Project: Ad design</h3>
+<h3 id="toc_5">Project: Ad design 广告创意！</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/pjs/5801349036326912">Example code: 怪兽日记</a></p>
 
 <p><img src="Images/adDesign.gif" height="300"/></p>
 
