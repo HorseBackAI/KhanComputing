@@ -328,40 +328,105 @@ kbd {
 
 <body>
 
-<h2 id="toc_0">Functions</h2>
+<h2 id="toc_0">Functions 方法/函数</h2>
 
-<h3 id="toc_1">Define function and call it</h3>
+<h3 id="toc_1">Define function and call it 定义方法，然后使用它</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/function/4631959380246528">Example code: function 方法</a></p>
 
 <div>
-<img src="Images/winston.png" height="300"/>
 <img src="Images/winstonMultiple.png" height="300"/>
 </div>
 
-<div>
-<img src="Images/function.png" height="300"/>
-</div>
+<div><pre><code class="language-none">// Define function 定义一个新方法
+var drawFace = function(){
+    var faceX = random(0, 400);
+    var faceY = random(0, 400);
+    var faceSize = random(50, 150);
+    
+    // face
+    noStroke();
+    fill(238, 255, 0);
+    ellipse(faceX, faceY, faceSize, faceSize);
+    // eyes
+    fill(20, 18, 18);
+    ellipse(faceX-faceSize*0.15, faceY-faceSize*0.2, faceSize*0.2, faceSize*0.2);
+    ellipse(faceX+faceSize*0.25, faceY-faceSize*0.2, faceSize*0.2, faceSize*0.2);
+    // mouth
+    fill(224, 22, 22);
+    ellipse(faceX+faceSize*0.05, faceY+faceSize*0.2, faceSize*0.4, faceSize*0.5);
+};
 
-<p>Define function and then call / use it multiple (three) times, drawing winston faces at random positions and a fixed size of 200p pixels. <a href="https://www.khanacademy.org/computer-programming/function/4631959380246528">Example code as right above.</a> By this way, we make the code reusable. Great!</p>
+// Use or say call the function 
+// 使用或者叫&quot;调用&quot;我们定义的方法
+drawFace();
+drawFace();
+drawFace();</code></pre></div>
 
-<h3 id="toc_2">Function parameters</h3>
+<p>By defining code as function, we make the code reusable. Great!</p>
+
+<p>把一段代码定义成“方法”，我们就可以方便地复用（重复使用）这些代码了！牛～～</p>
+
+<h3 id="toc_2">Function parameters 使用参数，更牛掰地使用方法</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/function-parameters/6469836223365120">Example code: function parameters 方法使用参数</a></p>
 
 <div>
 <img src="Images/winstonParameters.png" height="300"/>
 </div>
 
-<p>Use parameters to have more control on the function, by which we draw the winston at specified positions and sizes. <a href="https://www.khanacademy.org/computer-programming/function-parameters/6469836223365120">Example code as below</a></p>
+<p>Use parameters to have more control on the function, by which we draw the winston at specified positions and sizes.</p>
 
-<p><img src="Images/functionParameters.png" height="300"/></p>
+<p>使用参数，来更好地控制我们的方法：让飞机往哪儿飞～～😄</p>
 
-<h3 id="toc_3">Function return values</h3>
+<p>其实是告诉方法：具体在哪儿画这些脸？需要画多大？</p>
 
-<div>
-<img src="Images/functionReturnValues.png" height="300"/>
-</div>
+<div><pre><code class="language-none">// Define a function 定义一个方法，是带参数的
+var drawWinston = function(faceX, faceY, faceSize){
+    // face
+    noStroke();
+    fill(238, 255, 0);
+    ellipse(faceX, faceY, faceSize, faceSize);
+    
+    // eyes
+    fill(20, 18, 18);
+    ellipse(faceX-faceSize*0.15, faceY-faceSize*0.2, faceSize*0.2, faceSize*0.2);
+    ellipse(faceX+faceSize*0.25, faceY-faceSize*0.2, faceSize*0.2, faceSize*0.2);
+    
+    // mouth
+    fill(224, 22, 22);
+    ellipse(faceX+faceSize*0.05, faceY+faceSize*0.2, faceSize*0.4, faceSize*0.5);
+};
+
+
+// Call function with parameters 调用方法，给出具体参数～
+drawWinston(282, 287, 150);
+drawWinston(100, 300, 80);
+drawWinston(random(50, 350), random(100,350), random(100,200));
+</code></pre></div>
+
+<h3 id="toc_3">Function return values 函数返回值</h3>
+
+<p><a href="https://www.khanacademy.org/computer-programming/calculator-function-returns-value/5515567705964544">Example code: calculator 计算器示例</a></p>
 
 <p><img src="Images/functionReturnValues-Result.png" height="200"/></p>
 
-<p>Function gets inputs by parameters, computes result and returns the result value. <a href="https://www.khanacademy.org/computer-programming/calculator-function-returns-value/5515567705964544">Calculator: example code for function returning values.</a></p>
+<div><pre><code class="language-none">var add = function(a, b){
+    var result = a + b;
+    return result;
+};
+
+var subtract = function(a, b){
+    return a - b;
+};
+
+var multiply = function(a, b){
+    return a * b;
+};
+
+var divide = function(a, b){
+    return a / b;
+};</code></pre></div>
 
 <h2 id="toc_4">Local and global variables</h2>
 
