@@ -428,36 +428,86 @@ var divide = function(a, b){
     return a / b;
 };</code></pre></div>
 
-<h2 id="toc_4">Local and global variables</h2>
+<h2 id="toc_4">Local and global variables 局部和全局变量</h2>
 
-<div>
-<img src="Images/localGlobalVariables-Result.png" height="280"/>
-</div>
+<ul>
+<li>局部变量：只在函数里面使用</li>
+<li>全局变量：在函数外面定义了，函数里外都可使用</li>
+</ul>
 
-<p><img src="Images/localGlobalVariables.png" height="400"/></p>
+<p><a href="https://www.khanacademy.org/computer-programming/local-and-global-variables-metric/5837016842977280">Example code: grown height 分阶段长个儿，一共长了多高</a></p>
 
-<p><a href="https://www.khanacademy.org/computer-programming/local-and-global-variables-metric/5837016842977280">Example code: Grown height in centimeters</a></p>
+<p><img src="Images/localGlobalVariables-Result.png" height="280"/></p>
 
-<h2 id="toc_5">Special ProcessingJS functions</h2>
+<div><pre><code class="language-none">var lifeHeight = 50;
 
-<div><pre><code class="language-none">draw = function(){};
-mouseClicked = function(){};
-...</code></pre></div>
+...
 
-<p>We can find more ProcessingJS built-in functions in documentation.</p>
+var computeHeight = function(startAge, endAge, grownHeightPerYear) {
+    // 这一阶段长高了多少
+    var periodHeight = grownHeightPerYear * (endAge - startAge);
+    // 叠加到实际身高上，现在有多高
+    lifeHeight += periodHeight;
+    // 这里，只返回这一阶段长高了多少
+    return periodHeight;
+};
+
+...
+
+text(computeHeight(0, 8, 9) + &quot; cm&quot;, 240, 80);
+text(computeHeight(8, 16, 8)  + &quot; cm&quot;, 240, 120);
+text(lifeHeight  + &quot; cm&quot;, 240, 160);</code></pre></div>
+
+<h2 id="toc_5">Special ProcessingJS functions 系统提供的方法</h2>
+
+<p>一些常用的功能（方法），系统帮我们先定义好了，直接拿来就可以用！</p>
+
+<div><pre><code class="language-none">// 一秒画屏30次，动画～～
+draw = function(){};
+
+// 鼠标一点击，系统就监听到，然后执行方法里的代码～
+mouseClicked = function(){};</code></pre></div>
+
+<p>We can find more ProcessingJS built-in functions in documentation. 更多直接可用（内建）的方法，可在文档中找到～</p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/special-processingjs-functions-bounce-back-the-car/6263060150435840">Example code: Pull back the car 拽住前进的汽车！</a></p>
 
 <p><img src="Images/bounceBackCar.gif" height="300"/></p>
 
-<p><a href="https://www.khanacademy.org/computer-programming/special-processingjs-functions-bounce-back-the-car/6263060150435840">Example code: Bounce back the car</a></p>
+<div><pre><code class="language-none">// global variabel: position of the car
+// 全局变量：车的水平位置
+var x = 11;
 
-<h2 id="toc_6">Project: Fish tank</h2>
+var draw = function() {
+    background(252, 255, 214);
+
+    // draw the car body 车身
+    fill(255, 0, 115);
+    rect(x, 200, 100, 20);
+    rect(x + 15, 178, 70, 40);
+    
+    // draw the wheels 轱辘
+    fill(77, 66, 66);
+    ellipse(x + 25, 221, 24, 24);
+    ellipse(x + 75, 221, 24, 24);
+    
+    // car move forward (right) 车向右前进
+    x = x + 3;
+};
+
+mouseClicked = function() {
+    // pull the car back (left) 把它拽回来～
+    x = x - 50;
+};</code></pre></div>
+
+<h2 id="toc_6">Project: Fish tank 大鱼缸！</h2>
 
 <div>
 <img src="Images/fishTank01.png" height="300"/>
 <img src="Images/fishTank02.png" height="300"/>
 </div>
 
-<p><a href="https://www.khanacademy.org/computer-programming/project-fish-tank/6520278628253696">Fish tank example code</a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/project-fish-tank/6520278628253696">Example code: Fish tank </a></p>
 
 
 
