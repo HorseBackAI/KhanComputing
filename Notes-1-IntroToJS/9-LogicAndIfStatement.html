@@ -328,51 +328,76 @@ kbd {
 
 <body>
 
-<h2 id="toc_0">Logic and if statement</h2>
+<h2 id="toc_0">Logic and if statement 逻辑判断 和 if语句</h2>
 
-<h3 id="toc_1">if statement</h3>
+<h3 id="toc_1">if statement 如果语句</h3>
 
-<p>Bouncy ball</p>
+<p><a href="https://www.khanacademy.org/computer-programming/if-statements-bouncy-ball/6724999452377088">Example code: Bouncy ball 弹来弹去</a></p>
 
 <p><img src="Images/bouncyBall.gif" height="300"/></p>
 
-<p><img src="Images/if.png" height="350"/></p>
+<p><code>if(condition){code to run}</code> </p>
 
-<p><code>if(condition){code to run}</code></p>
+<ul>
+<li>如果条件满足，就执行下面的代码段；</li>
+<li>如果条件不满足，那么，下面的代码段不执行。</li>
+</ul>
 
-<p>If <span style="color: blue">the condition is satisfied</span>, then <span style="color: red">the code runs</span>. Otherwise, the code doesn&#39;t run. </p>
+<p>这样，我们就可以通过判断条件是否满足，来执行不同的代码～～</p>
 
-<p>If <span style="color: blue">the ball hits the boundary</span>, then <span style="color: red">the ball bounces back</span>. Otherwise, it goes its way.</p>
+<div><pre><code class="language-none">// Logic: if statement 逻辑判断：球往哪边动？
+if(x &gt; 375){
+    speed = -5;
+}
+if(x &lt; 25){
+   speed = 5;
+}
+    
+// Move the ball 球动每一步
+x = x + speed;</code></pre></div>
 
-<p><a href="https://www.khanacademy.org/computer-programming/if-statements-bouncy-ball/6724999452377088">Example code: Bouncy ball</a></p>
+<h3 id="toc_2">Mouse interaction: mouseIsPressed 鼠标交互：是否被摁键</h3>
 
-<h3 id="toc_2">Mouse interaction: mouseIsPressed</h3>
+<p><code>mouseIsPressed</code> ProcessingJS provides it to check if mouse is pressed. 由ProcessingJS提供的判断，判断鼠标摁键是否被摁下</p>
 
-<p><a href="https://www.khanacademy.org/computer-programming/mouse-interaction-hide-and-seen-the-balls/4632227815702528">Hide and see the ball</a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/mouse-interaction-hide-and-seen-the-balls/4632227815702528">Mouse Interaction: mouseIsPressed 判断鼠标是否被摁</a></p>
 
-<p><strong>mouseIsPressed</strong> ProcessingJS provides it to check if mouse is pressed.</p>
-
-<div><pre><code class="language-none">position = position + speed;
-ellipse(position, mouseY, 50, 50);
+<div><pre><code class="language-none">ellipse(position, mouseY, 50, 50);
 if (mouseIsPressed) {
     ellipse(mouseX, position, 50, 50);
 }</code></pre></div>
 
-<h3 id="toc_3">Challenge: Our first painting app</h3>
+<h3 id="toc_3">Challenge: Our first painting app 第一个画图应用</h3>
 
-<p>Use <code>mouseIsPressed</code> to paint it:</p>
+<p>Use <code>mouseIsPressed</code> to paint it: </p>
 
 <p><img src="Images/mouseIsPressed-Boolean.gif" height="300"/></p>
 
-<h3 id="toc_4">Boolean 布尔值: true or false</h3>
+<h3 id="toc_4">Boolean 布尔值: true / false 真 或者 假</h3>
 
-<p>Every condition will be evaluated as a Boolean.</p>
+<p>Every condition can be written as a boolean expression, and will be evaluated as a Boolean. 每个条件都可以写成一个布尔表达式。而且每个条件要么满足（布尔值是真），要么不满足（布尔值是假）。</p>
 
-<p>The 3rd data type we&#39;ve learned so far. The two that we already grasped are: Number and String.</p>
+<p>For exampple 举例: </p>
 
-<p><img src="Images/booleans.png" height="260"/></p>
+<ul>
+<li>10 &gt; 8 这个布尔表达式的值、即布尔值是真，那么，条件满足。</li>
+<li>2 &lt;= 1 这个布尔表达式的值、即布尔值是假，那么，条件不满足。</li>
+</ul>
 
-<p><a href="https://www.khanacademy.org/computer-programming/booleans/5258852840325120">Example code: Booleans</a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/booleans/5258852840325120">Example code: Booleans 布尔值</a></p>
+
+<div><pre><code class="language-none">println(&quot;1. &quot; + true); // boolean 布尔值
+println(&quot;2. &quot; + false); // boolean 布尔值
+
+// Boolean expression 布尔表达式
+println(&quot;3. &quot; + (number &lt;= 48)); // less than or equal 小于等于
+println(&quot;4. &quot; + (number &gt;= 48)); // greater than or equal 大于等于
+println(&quot;5. &quot; + (number === 48)); // equal 等于
+println(&quot;6. &quot; + (number !== 48)); // not equal 不等于
+println(&quot;7. &quot; + (48 &lt; number)); // less than 小于
+println(&quot;8. &quot; + (number + 30 &gt; 48)); // expression evaluation 大于</code></pre></div>
+
+<p>The 3rd data type we&#39;ve learned so far. The two that we already grasped are: Number and String. 布尔值：这是我们学到的第三种数据类型。回顾一下，前面我们已经学过数值、和字符串。</p>
 
 <h3 id="toc_5">Challenge: Number analyzer</h3>
 
