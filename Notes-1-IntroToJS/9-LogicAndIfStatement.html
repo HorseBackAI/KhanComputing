@@ -362,10 +362,9 @@ x = x + speed;</code></pre></div>
 
 <p><a href="https://www.khanacademy.org/computer-programming/mouse-interaction-hide-and-seen-the-balls/4632227815702528">Mouse Interaction: mouseIsPressed 判断鼠标是否被摁</a></p>
 
-<div><pre><code class="language-none">ellipse(position, mouseY, 50, 50);
-if (mouseIsPressed) {
-    ellipse(mouseX, position, 50, 50);
-}</code></pre></div>
+<div><pre><code class="language-none">    if (mouseIsPressed) {
+        ellipse(mouseX, mouseY, 50, 50);
+    }</code></pre></div>
 
 <h3 id="toc_3">Challenge: Our first painting app 第一个画图应用</h3>
 
@@ -375,16 +374,25 @@ if (mouseIsPressed) {
 
 <h3 id="toc_4">Boolean 布尔值: true / false 真 或者 假</h3>
 
-<p>Every condition can be written as a boolean expression, and will be evaluated as a Boolean. 每个条件都可以写成一个布尔表达式。而且每个条件要么满足（布尔值是真），要么不满足（布尔值是假）。</p>
+<p>Every condition is a comparison, which can be written as a boolean expression, and will be evaluated as a Boolean. 每个条件其实就是一个判断，它写成的式子叫布尔表达式，然后布尔表达式得出一个值，叫布尔值。</p>
 
-<p>For example 举例: </p>
+<p>判断、比较 comparison、条件 condition，这三其实是一回事，举例：</p>
 
 <ul>
-<li>10 &gt; 8 这个布尔表达式的值、即布尔值是真，也就是条件满足。</li>
-<li>2 &lt;= 1 这个布尔表达式的值、即布尔值是假，也就是条件不满足。</li>
+<li>10 &gt; 8 对！这个比较是对的，也可以说这个判断是对的，这个条件就满足，它的布尔值是真 true。</li>
+<li>2 &lt;= 1 不对！这个比较不对，判断就是假 false，条件不满足。</li>
 </ul>
 
-<p><a href="https://www.khanacademy.org/computer-programming/booleans/5258852840325120">Example code: Booleans 布尔值</a></p>
+<p>代码执不执行呢？</p>
+
+<p>就是用语法 if( 条件 ){ 代码 } 来做判断：</p>
+
+<ul>
+<li>如果条件是真 true，即条件满足，那么，就执行 { 代码 }；</li>
+<li>如果条件是假 false，即条件不满足，那么，就不执行{ 代码 }。</li>
+</ul>
+
+<p><a href="https://www.khanacademy.org/computer-programming/booleans/5258852840325120">Example code: Booleans 布尔值：判断的真假</a></p>
 
 <div><pre><code class="language-none">println(&quot;1. &quot; + true); // boolean 布尔值
 println(&quot;2. &quot; + false); // boolean 布尔值
@@ -399,17 +407,19 @@ println(&quot;8. &quot; + (number + 30 &gt; 48)); // expression evaluation 大�
 
 <p>The 3rd data type we&#39;ve learned so far. The two that we already grasped are: Number and String. 布尔值：这是我们学到的第三种数据类型。回顾一下，前面我们已经学过数值、和字符串。</p>
 
-<h3 id="toc_5">Challenge: Number analyzer</h3>
+<h3 id="toc_5">Challenge: Number analyzer 数字分析仪</h3>
 
-<p><img src="Images/numberAnalyzer.png" height="200"/></p>
+<p>判断（比较）数字是大于0呢？小于0呢？还是等于0？</p>
 
 <p><a href="https://www.khanacademy.org/computer-programming/challenge-number-analyzer/6478309751341056">Example code: Number analyzer</a></p>
+
+<p><img src="Images/numberAnalyzer.png" height="200"/></p>
 
 <h3 id="toc_6">Logical Operators 逻辑运算符</h3>
 
 <ul>
-<li>Need to satisfy 2 or more conditions (evaluated as Booleans) simultaneously: AND 并且 <code>&amp;&amp;</code></li>
-<li>At least satify 1 condition: OR 或者 <code>||</code></li>
+<li>Need all conditions are true simultaneously: AND 并且，需要所有条件都是真，运算符是 <code>&amp;&amp;</code></li>
+<li>At least one comparison is true: OR 或者，至少有一个条件是真，运算符是 <code>||</code></li>
 </ul>
 
 <p><a href="https://www.khanacademy.org/computer-programming/logical-operators/4970496601178112">Example code: Color Area and Edge Detector</a></p>
@@ -431,7 +441,7 @@ if (abs(mouseX - 200) &lt; 10 || abs(mouseY - 200) &lt; 10 || mouseX &lt; 10 || 
     text(&quot;EDGE BALL!&quot;, 115, 195);
 }</code></pre></div>
 
-<p>About <a href="https://baike.baidu.com/item/%E7%BB%9D%E5%AF%B9%E5%80%BC%E5%87%BD%E6%95%B0/10671320">absolute value</a> “∣x∣表示x轴上的点 x 到原点的距离”</p>
+<p>About <a href="https://baike.baidu.com/item/%E7%BB%9D%E5%AF%B9%E5%80%BC%E5%87%BD%E6%95%B0/10671320">absolute value 绝对值求距离</a> “∣x∣表示x轴上的点 x 到原点的距离”</p>
 
 <h3 id="toc_7">Challenge: Buttons</h3>
 
