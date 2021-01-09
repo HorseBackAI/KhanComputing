@@ -418,11 +418,11 @@ println(&quot;8. &quot; + (number + 30 &gt; 48)); // expression evaluation 大�
 <h3 id="toc_6">Logical Operators 逻辑运算符</h3>
 
 <ul>
-<li>Need all conditions are true simultaneously: AND 并且，需要所有条件都是真，运算符是 <code>&amp;&amp;</code></li>
-<li>At least one comparison is true: OR 或者，至少有一个条件是真，运算符是 <code>||</code></li>
+<li>和、并且，运算符是 <code>&amp;&amp;</code>：Need all conditions are true simultaneously，需要所有条件都是真</li>
+<li>或者，运算符是 <code>||</code>：At least one comparison is true，至少有一个条件满足</li>
 </ul>
 
-<p><a href="https://www.khanacademy.org/computer-programming/logical-operators/4970496601178112">Example code: Color Area and Edge Detector</a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/logical-operators/4970496601178112">Example code: Color Area and Edge Detector 点亮彩色区域和撞线||</a></p>
 
 <p><img src="Images/logicOperators.gif" height="300"/></p>
 
@@ -455,21 +455,34 @@ if (mouseIsPressed &amp;&amp; mouseX &gt;= 50 &amp;&amp; mouseX &lt;= 300 &amp;&
     showMonster();
 }</code></pre></div>
 
-<h3 id="toc_8">Random number</h3>
-
-<p>Random number: <code>random(start, end)</code></p>
-
-<p>Round 圆整 number to the nearest integer: </p>
+<h3 id="toc_8">Random number, round, ceil and floor 随机数，圆整、天花板、地板计算</h3>
 
 <ul>
-<li><code>round(0.9)</code> 1</li>
-<li><code>round(0.2)</code> 0</li>
+<li>产生随机数 Random number: <code>random(start, end)</code></li>
+<li>圆整到最邻近的整数 Round number to the nearest integer: <code>round(number)</code></li>
+<li>圆整到比它大的最邻近整数 Round number to the nearest larger integer: <code>ceil(number)</code></li>
+<li>圆整到比它小的最邻近整数 Round number to the nearest smaller integer: <code>floor(number)</code></li>
 </ul>
 
-<div><pre><code class="language-none">// Generate a random number between 0 and 1
-var number = random(0, 1);
-// Round it to a nearest integer
-var integer = round(number);</code></pre></div>
+<p><a href="https://www.khanacademy.org/computer-programming/random-round-ceil-floor/6720677866848256">Example code: 随机 random, 圆整 round, 天花板 ceil, 地板 floor</a></p>
+
+<div><pre><code class="language-none">var number = random(0, 10); // 随机 
+println(number);
+
+var number1 = round(10.1); // 圆整
+println(number1);
+var number2 = round(10.9);
+println(number2);
+
+var number3 = ceil(10.1); // 天花板
+println(number3);
+var number4 = ceil(-10.1);
+println(number4);
+
+var number5 = floor(10.1); // 地板
+println(number5);
+var number6 = floor(-10.1); 
+println(number6);</code></pre></div>
 
 <h3 id="toc_9">if / else 如果 / 否则</h3>
 
