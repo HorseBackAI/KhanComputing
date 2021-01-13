@@ -415,7 +415,7 @@ println(&quot;8. &quot; + (number + 30 &gt; 48)); // expression evaluation 大�
 
 <p><img src="Images/numberAnalyzer.png" height="200"/></p>
 
-<h3 id="toc_6">Logical Operators 逻辑运算符</h3>
+<h3 id="toc_6">Logical Operators 逻辑运算符：和、或者 ～ 组合多个条件（多个判断）</h3>
 
 <ul>
 <li>和、并且，运算符是 <code>&amp;&amp;</code>：Need all conditions are true simultaneously，需要所有条件都是真</li>
@@ -443,9 +443,21 @@ if (abs(mouseX - 200) &lt; 10 || abs(mouseY - 200) &lt; 10 || mouseX &lt; 10 || 
 
 <p>About <a href="https://baike.baidu.com/item/%E7%BB%9D%E5%AF%B9%E5%80%BC%E5%87%BD%E6%95%B0/10671320">absolute value 绝对值求距离</a> “∣x∣表示x轴上的点 x 到原点的距离”</p>
 
-<h3 id="toc_7">Challenge: Buttons</h3>
+<h3 id="toc_7">Challenge: Buttons 按键的诞生</h3>
 
-<p><a href="https://www.khanacademy.org/computer-programming/challenge-smarter-button/6676261854593024">Example code: Button Monster</a></p>
+<p>按键被按下，包括如下判断：</p>
+
+<ul>
+<li>摁键是否被摁下？</li>
+<li>鼠标摁下时，鼠标的位置
+
+<ul>
+<li>横坐标在一个范围里</li>
+<li>纵坐标在一个范围里</li>
+</ul></li>
+</ul>
+
+<p><a href="https://www.khanacademy.org/computer-programming/challenge-smarter-button/6676261854593024">Example code: Button Monster 一摁怪物就现身</a></p>
 
 <p><img src="Images/buttonMonster.gif" height="300"/></p>
 
@@ -455,7 +467,7 @@ if (mouseIsPressed &amp;&amp; mouseX &gt;= 50 &amp;&amp; mouseX &lt;= 300 &amp;&
     showMonster();
 }</code></pre></div>
 
-<h3 id="toc_8">Random number, round, ceil and floor 随机数，圆整、天花板、地板计算</h3>
+<h3 id="toc_8">Random number, round, ceil and floor 产生随机数，计算圆整数、天花板数、地板数</h3>
 
 <ul>
 <li>产生随机数 Random number: <code>random(start, end)</code></li>
@@ -464,7 +476,7 @@ if (mouseIsPressed &amp;&amp; mouseX &gt;= 50 &amp;&amp; mouseX &lt;= 300 &amp;&
 <li>圆整到比它小的最邻近整数 Round number to the nearest smaller integer: <code>floor(number)</code></li>
 </ul>
 
-<p><a href="https://www.khanacademy.org/computer-programming/random-round-ceil-floor/6720677866848256">Example code: 随机 random, 圆整 round, 天花板 ceil, 地板 floor</a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/random-round-ceil-floor/6720677866848256">Example code: 随机数 random, 圆整数 round, 天花板数 ceil, 地板数 floor</a></p>
 
 <div><pre><code class="language-none">var number = random(0, 10); // 随机 
 println(number);
@@ -484,49 +496,52 @@ println(number5);
 var number6 = floor(-10.1); 
 println(number6);</code></pre></div>
 
-<h3 id="toc_9">if / else 如果 / 否则</h3>
+<h3 id="toc_9">if / else 两分支：如果 / 否则</h3>
 
-<p>There are only 2 possibilities. 仅有两种可能，非此即彼</p>
+<p>两叉路口，通过判断，决定走哪条路、哪个分支。</p>
 
-<p><a href="https://www.khanacademy.org/computer-programming/ifelse/4899834389938176">Example code: 0 Red vs. 1 Green</a></p>
+<p>There are only 2 possibilities. 仅有两种可能，非此即彼。</p>
+
+<p><a href="https://www.khanacademy.org/computer-programming/ifelse/4899834389938176">Example code: If/Else - 红绿灯 - 两分支：如果/否则
+</a></p>
 
 <p><img src="Images/ifElse.gif" height="200"/></p>
 
-<div><pre><code class="language-none">// Draw the circle
-if (integer === 0) {
-    fill(255, 0, 68);
-} 
-else {
-    fill(9, 255, 0);
-}
-noStroke();
-ellipse(300, 99, 100, 100);</code></pre></div>
+<div><pre><code class="language-none">    // Draw the circle 画圆：值不同，颜色不同
+    if (integer === 0) {
+        fill(255, 0, 68);
+    } else {
+        fill(9, 255, 0);
+    }
+    noStroke();
+    ellipse(300, 99, 100, 100);</code></pre></div>
 
-<h3 id="toc_10">if / else if 如果 / 否则如果</h3>
+<h3 id="toc_10">if / else if 多分支：如果 / 否则如果 ...</h3>
 
 <p>There are more than 2 possibilities. 3种（包括3种）以上的可能</p>
 
-<p><a href="https://www.khanacademy.org/computer-programming/ifelse-else-if/5477439442862080">Example code: if / else if / else</a></p>
+<p><a href="https://www.khanacademy.org/computer-programming/ifelse-else-if/5477439442862080">Example code: If / Else If / Else 红绿黄灯 - 多分支：如果/否则如果/否则
+</a></p>
 
 <p><img src="Images/ifElseIfElse.gif" height="200"/></p>
 
-<div><pre><code class="language-none">// generate a random number between 0 and 1
+<div><pre><code class="language-none">// generate a random number between 0 and 3 产生随机数
 var number = random(0, 3);
 
 ...
 
-// set the coin color
+// set the coin color 值不同，颜色不同
 if (number &lt; 1) {
     fill(255, 0, 64);
-}
-else if (number &lt; 2) {
+} else if (number &lt; 2) {
     fill(0, 255, 26);
-}
-else if (number &lt; 3) {
+} else{
     fill(255, 247, 0);
 }</code></pre></div>
 
-<h3 id="toc_11">Project: Magic 8-Ball</h3>
+<h3 id="toc_11">Project: Magic 8-Ball 吉利话</h3>
+
+<p>多分支，一点出彩～～</p>
 
 <p><img src="Images/magic8Ball.png" height="300"/></p>
 
